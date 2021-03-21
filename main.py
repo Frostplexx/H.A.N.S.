@@ -3,11 +3,13 @@ from discord.ext import commands
 import json
 
 # Get configuration.json
-with open("configuration.json", "r") as config: 
+with open("config.json", "r") as config: 
 	data = json.load(config)
-	token = data["token"]
 	prefix = data["prefix"]
 	initial_extensions = data["commands"]
+with open("token.json", "r") as config:
+		data = json.load(config)
+		token = data["token"]
 
 class Greetings(commands.Cog):
 	def __init__(self, bot):
