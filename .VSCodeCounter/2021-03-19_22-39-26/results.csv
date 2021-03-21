@@ -1,0 +1,13 @@
+"filename", "language", "Python", "JSON", "comment", "blank", "total"
+"d:\Projects\Jarvis\Cogs\done.py", "Python", 20, 0, 1, 5, 26
+"d:\Projects\Jarvis\Cogs\hello.py", "Python", 13, 0, 0, 4, 17
+"d:\Projects\Jarvis\Cogs\help.py", "Python", 53, 0, 0, 7, 60
+"d:\Projects\Jarvis\Cogs\onCommandError.py", "Python", 31, 0, 0, 4, 35
+"d:\Projects\Jarvis\Cogs\ping.py", "Python", 17, 0, 0, 4, 21
+"d:\Projects\Jarvis\Cogs\purge.py", "Python", 13, 0, 0, 4, 17
+"d:\Projects\Jarvis\Cogs\todo.py", "Python", 15, 0, 1, 4, 20
+"d:\Projects\Jarvis\Cogs\todoedit.py", "Python", 18, 0, 1, 6, 25
+"d:\Projects\Jarvis\Cogs\undone.py", "Python", 19, 0, 0, 6, 25
+"d:\Projects\Jarvis\configuration.json", "JSON", 0, 4, 0, 0, 4
+"d:\Projects\Jarvis\main.py", "Python", 37, 0, 3, 10, 50
+"Total", "-", 236, 4, 6, 54, 300
