@@ -1,0 +1,18 @@
+{
+	"prefix": "!",
+	"commands": [
+		"Cogs.utility.help",
+		"Cogs.utility.ping",
+		"Cogs.utility.purge",
+		"Cogs.utility.commands",
+		"Cogs.misc.hello",		
+		"Cogs.todo.todo",
+		"Cogs.todo.todoedit",
+		"Cogs.todo.tick",
+		"Cogs.todo.untick",
+		"Cogs.music.play",
+		"Cogs.music.skip",
+		"Cogs.music.stop",
+		"Cogs.music.prev"
+	]
+}
