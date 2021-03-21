@@ -1,7 +1,7 @@
 # H.A.N.S.
 
-A bot that does... stuff. 
-Not yet finished
+A bot that does... stuff, written in python because fuck everything else.
+Not yet finished. 
 
 TODO: 
 
