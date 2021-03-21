@@ -20,3 +20,13 @@ TODO:
 Features: 
 - Todolist
 - Play music and very simple queue
+
+Use: 
+
+Make a token.json in the root directory containing this:
+
+`{
+    "token": ""
+}`
+
+pls provide your own token
