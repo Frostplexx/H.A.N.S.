@@ -2,7 +2,7 @@ import discord
 import json
 from discord.ext import commands
 
-with open("configuration.json", "r") as config: 
+with open("config.json", "r") as config: 
     data = json.load(config)
     commandslist = data["commands"]
 

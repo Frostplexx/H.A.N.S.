@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import json
 import random
-with open("configuration.json", "r") as config: 
+with open("config.json", "r") as config: 
     data = json.load(config)
     hello = [
 		"Hi",
