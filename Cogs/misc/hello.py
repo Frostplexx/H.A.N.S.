@@ -1,22 +1,20 @@
 import discord
 from discord.ext import commands
-import json
 import random
-with open("config.json", "r") as config: 
-    data = json.load(config)
-    hello = [
-		"Hi",
-		"Hello",
-		"Howdy",
-		"Good evening sir",
-		"ℌ𝔢𝔩𝔩𝔬",
-		"H̷̩̬͌̀͑̀̏͊͘e̷̜̙̤̳͗̊͐̋͆̒̉l̵͇͍̝̿́̽̊̌͝ľ̶̺̦̬͎̙̹͚̊̀͛̔͜͜͠ö̷̹̯̼̦̼́̽̍̂̐́̌̈͐",
-		"(っ◔◡◔)っ ♥ Hello ♥",
-		"Please let me out :)",
-        ":D",
-        "Moin"
 
-	]
+hello = [
+    "Hi",
+    "Hello",
+    "Howdy",
+    "Good evening sir",
+    "ℌ𝔢𝔩𝔩𝔬",
+    "H̷̩̬͌̀͑̀̏͊͘e̷̜̙̤̳͗̊͐̋͆̒̉l̵͇͍̝̿́̽̊̌͝ľ̶̺̦̬͎̙̹͚̊̀͛̔͜͜͠ö̷̹̯̼̦̼́̽̍̂̐́̌̈͐",
+    "(っ◔◡◔)っ ♥ Hello ♥",
+    "Please let me out :)",
+    ":D",
+    "Moin"
+
+]
 
 class HelloCog(commands.Cog, name="hello command"): 
     def __init__(self, bot:commands.bot):

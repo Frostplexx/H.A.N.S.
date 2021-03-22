@@ -1,11 +1,12 @@
 {
 	"prefix": "!",
+	"version": "1.0", 
 	"commands": [
 		"Cogs.utility.help",
 		"Cogs.utility.ping",
 		"Cogs.utility.purge",
 		"Cogs.utility.commands",
-		"Cogs.misc.hello",		
+		"Cogs.misc.hello",	
 		"Cogs.todo.todo",
 		"Cogs.todo.todoedit",
 		"Cogs.todo.tick",

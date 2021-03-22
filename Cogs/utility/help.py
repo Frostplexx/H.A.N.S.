@@ -1,6 +1,10 @@
 import discord
 from discord.ext import commands
 from random import randint
+import json
+with open("config.json", "r") as config: 
+	data = json.load(config)
+	version = data["version"]
 
 class HelpCog(commands.Cog, name="help command"):
 	def __init__(self, bot:commands.Bot):
@@ -53,7 +57,8 @@ class HelpCog(commands.Cog, name="help command"):
 			embed = discord.Embed(title=f"__**Help page of {self.bot.user.name}**__", description=f"**{self.bot.command_prefix}help (command)** : Display the help list or the help data for a specific command.", color=randint(0, 0xffffff))
 			embed.set_thumbnail(url=f'{self.bot.user.avatar_url}')
 			embed.add_field(name=f"__COMMANDS :__", value=f"**{self.bot.command_prefix}commands**: list of aviable commands.", inline=False)
-			embed.add_field(name=f"__About__", value=f"The Highly Automatic Nonbiological Supervisor (H.A.N.S.) is your personal assistant, helping you manage your discord server.", inline=False)
+			embed.add_field(name=f"__ABOUT:__", value=f"The Highly Automatic Nonbiological Supervisor (H.A.N.S.) is your personal assistant, helping you manage your discord server.", inline=False)
+			embed.add_field(name=f"__VERSION:__", value=f"{(version)}", inline=False)
 			await ctx.channel.send(embed=embed)
 			
 
