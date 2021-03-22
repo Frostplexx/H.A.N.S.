@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
-import json
-import random
+
 
 class HelloCog(commands.Cog, name="hello command"): 
     def __init__(self, bot:commands.bot):

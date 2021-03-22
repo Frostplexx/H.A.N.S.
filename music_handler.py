@@ -23,7 +23,6 @@ ffmpeg_options = {
 }
 
 ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
-
 class MHandler(discord.PCMVolumeTransformer):
     queue = []
     index = 0
