@@ -11,15 +11,16 @@ class TodoEditCog(commands.Cog, name="edit todo"):
                     usage="(item)",
                     description = "edit your todo list")
     @commands.cooldown(1, 2, commands.BucketType.member)
-    async def todoedit(self, ctx, item:str=None, new_message:str=None):
+    async def todoedit(self, ctx, item:int=0):
         channel =  ctx.channel
-        #await ctx.message.delete
-        async for messagelist in channel.history(limit=200):
-            if (item + ".") in messagelist.content:
-                await messagelist.edit(content=f"{item}. [ ] {(new_message)}")
+        #doesnt work pls fix :(
+        async for message in channel.history(limit=200):
+                    msg = message.content
+                    if "!todoedit" in msg:
+                        editmsg = msg.replace("!todoedit " + str(item), "")      
+                    if (item + ".") in msg:
+                        await message.edit(content=f"{item}. [ ] {(editmsg)}")
+
         await ctx.channel.purge(limit = 1)
-
-
-
 def setup(bot:commands.Bot):
 	bot.add_cog(TodoEditCog(bot))

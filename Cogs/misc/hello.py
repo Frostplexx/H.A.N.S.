@@ -25,6 +25,7 @@ class HelloCog(commands.Cog, name="hello command"):
                     description = "Say hello to the bot")
     @commands.cooldown(1, 2, commands.BucketType.member)
     async def ping(self, ctx):
+        #randomly choose a message from the list
         await ctx.send(random.choice(hello))
 
 

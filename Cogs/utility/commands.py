@@ -15,6 +15,8 @@ class CommandListCog(commands.Cog, name="commands"):
                     description = "list of aviable commands")
     @commands.cooldown(1, 2, commands.BucketType.member)
     async def ping(self, ctx):
+        #read the cogs from the json and list them
+        #this needs fixing
         final = ""
         for command in commandslist: 
             final += ("!" + command + ", ")

@@ -14,7 +14,8 @@ class ClearCog(commands.Cog, name="clear command"):
     async def clear(self, ctx):
         if len(MHandler.queue) > 2: 
             await ctx.send("Queue is empty!")
-        else: 
+        else:
+            #delete all items from queue except the one currently playing 
             MHandler.queue = [x for i,x in enumerate(MHandler.queue) if i!=MHandler.index]
             await ctx.send("Emptied Queue!")
 

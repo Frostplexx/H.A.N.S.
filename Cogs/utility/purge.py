@@ -10,6 +10,7 @@ class PurgeCog(commands.Cog, name="purge command"):
                     description = "Purge messages")
     @commands.cooldown(1, 2, commands.BucketType.member)
     async def ping(self, ctx, amount:int):
+        #purge set amount of messages + itself
         await ctx.channel.purge(limit = amount + 1)
 
 

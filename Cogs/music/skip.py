@@ -12,7 +12,7 @@ class SkipCog(commands.Cog, name="skip command"):
                     description = " skip music")
     @commands.cooldown(1, 2, commands.BucketType.member)
     async def skip(self, ctx):
-
+        #increment the playing index and restart song
         if MHandler.index < len(MHandler.queue) - 1:
             if ctx.voice_client.is_playing(): 
                 ctx.voice_client.stop()
