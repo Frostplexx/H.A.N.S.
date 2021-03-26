@@ -5,17 +5,16 @@ Not yet finished.
 
 TODO: 
 
-- [ ] make a queue viewable
-- [ ] make a queue viewable
+- [x] make a queue viewable
 - [ ] fix prev command
-- [ ] really clean up the cogs folder
+- [x] really clean up the cogs folder
 - [ ] server stats would be cool
 - [ ] make options like prefix
 - [ ] tickall command
 - [ ] todoedit without ""
 - [ ] reminders
-- [ ] version command
-- [ ] comment my code lol
+- [x] version command
+- [x] comment my code lol
 
 Features: 
 - Todolist
