@@ -15,6 +15,8 @@ TODO:
 - [ ] reminders
 - [x] version command
 - [x] comment my code lol
+- [ ] migrate to new slash commands
+
 
 Features: 
 - Todolist
