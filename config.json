@@ -10,6 +10,7 @@
 		"Cogs.todo.todo",
 		"Cogs.todo.todoedit",
 		"Cogs.todo.tick",
+		"Cogs.todo.delete",
 		"Cogs.todo.untick",
 		"Cogs.music.play",
 		"Cogs.music.skip",

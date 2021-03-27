@@ -9,10 +9,14 @@ class PurgeCog(commands.Cog, name="purge command"):
                     usage="<number of messages to purge>",
                     description = "Purge messages")
     @commands.cooldown(1, 2, commands.BucketType.member)
-    async def ping(self, ctx, amount:int):
+    async def ping(self, ctx, amount:str):
         #purge set amount of messages + itself
-        await ctx.channel.purge(limit = amount + 1)
-
-
+        if amount == "all":
+            await ctx.channel.purge()
+        elif amount.isnumeric(): 
+            await ctx.channel.purge(limit = int(amount) + 1)
+        else: 
+            await ctx.send("Usage: !purge <amount> or !purge all")
+        
 def setup(bot:commands.Bot):
 	bot.add_cog(PurgeCog(bot))

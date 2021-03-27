@@ -12,12 +12,12 @@ class ClearCog(commands.Cog, name="clear command"):
                     description = " clear queue")
     @commands.cooldown(1, 2, commands.BucketType.member)
     async def clear(self, ctx):
-        if len(MHandler.queue) > 2: 
-            await ctx.send("Queue is empty!")
-        else:
+        if len(MHandler.queue) > 2:
             #delete all items from queue except the one currently playing 
             MHandler.queue = [x for i,x in enumerate(MHandler.queue) if i!=MHandler.index]
             await ctx.send("Emptied Queue!")
+        else:
+            await ctx.send("Queue is empty!")
 
 
 
