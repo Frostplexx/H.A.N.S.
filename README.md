@@ -11,10 +11,11 @@ TODO:
 - [ ] server stats would be cool
 - [ ] make options like prefix
 - [ ] tickall command
-- [ ] todoedit without ""
+- [x] todoedit without ""
 - [ ] reminders
 - [x] version command
 - [x] comment my code lol
+- [ ] fix delte command
 - [ ] migrate to new slash commands
 
 
