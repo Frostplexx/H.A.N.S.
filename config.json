@@ -7,6 +7,7 @@
 		"Cogs.utility.purge",
 		"Cogs.utility.commands",
 		"Cogs.misc.hello",	
+		"Cogs.misc.sticker",
 		"Cogs.todo.todo",
 		"Cogs.todo.todoedit",
 		"Cogs.todo.tick",

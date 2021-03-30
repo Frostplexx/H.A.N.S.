@@ -16,12 +16,16 @@ class CommandListCog(commands.Cog, name="commands"):
     @commands.cooldown(1, 2, commands.BucketType.member)
     async def ping(self, ctx):
         #read the cogs from the json and list them
-        #this needs fixing
+        #find a better way to do this
         final = ""
         for command in commandslist: 
-            final += ("!" + command + ", ")
-            final = final.replace("Cogs.", "")
+            final += ("!" + command.replace("Cogs.", "").replace("utility.", "").replace("misc.", "").replace("todo.", "").replace("music.", "") + ", ")
         await ctx.send(final)
+        channel =  ctx.channel
+        async for message in channel.history(limit=200):
+            if "!commands" == message.content: 
+                await message.delete()
+                break
 
 
 def setup(bot:commands.Bot):

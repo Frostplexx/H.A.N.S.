@@ -17,7 +17,7 @@ class ChecklistCog(commands.Cog, name="checklist command"):
         async for message in channel.history(limit=200):
             msg = message.content
             #splits message containing ! into a list and removes the !todo on the first item
-            if "!" in msg:
+            if "!todo" in msg:
                 itemlist = msg.split(",")
                 itemlist[0] = itemlist[0].replace("!todo ", "") 
                 await message.delete()
