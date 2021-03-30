@@ -16,11 +16,11 @@ class DeleteCog(commands.Cog, name="delete"):
         async for message in channel.history(limit=200):
             #add a checkmark between the two brackets
             msg = message.content
-            if (str(item) + "." + " [ ]") in msg or str(item) + "." + " [✓]" in msg:
+            if (str(item) + ". [ ]") in msg or str(item) + ". [✓]" in msg:
                     for i in range(200): 
                         if (str(item + i) + ". [ ]") in msg:
-                            editmsg = msg.replace(str(item + i) + "." + "[ ]", "")
-                            message.edit(content=f"{item + i - 1}. [ ]{(editmsg)}")
+                            editmsg = msg.replace(str(item + i) + ". [ ]", "")
+                            await message.edit(content=f"{item + i}. [ ]{(editmsg)}")
                     await message.delete()
             if "!delete" in msg:
                 await message.delete()
