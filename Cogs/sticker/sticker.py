@@ -5,10 +5,6 @@ from random import randint
 from discord.guild import Guild
 
 
-client = discord.Client()
-user = discord.User
-
-
 class StickerCog(commands.Cog, name="sticker command"): 
     def __init__(self, bot:commands.bot):
         self.bot = bot
