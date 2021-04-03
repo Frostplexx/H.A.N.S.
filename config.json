@@ -19,6 +19,7 @@
 		"Cogs.music.stop",
 		"Cogs.music.prev",
 		"Cogs.music.queue",
-		"Cogs.music.clear"
+		"Cogs.music.clear",
+		"Cogs.reminders.remindme"
 	]
 }
