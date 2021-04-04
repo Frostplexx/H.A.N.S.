@@ -14,10 +14,10 @@ class StaddCog(commands.Cog, name="stadd command"):
     async def stadd(self, ctx, name:str=None):
 
         url = ctx.message.attachments[0].url
-        test = {name : url}
+        final = {name : url}
         with open("Cogs/sticker/stickers.json", "r+") as file: 
             data = json.load(file)
-            data.update(test)
+            data.update(final)
             file.seek(0)
             json.dump(data, file, sort_keys=True, indent=4)
             await ctx.send("Sticker " + name + " added successfully!")
