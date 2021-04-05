@@ -19,7 +19,7 @@ class CommandListCog(commands.Cog, name="commands"):
         #find a better way to do this
         final = ""
         for command in commandslist: 
-            final += ("!" + command.replace("Cogs.", "").replace("utility.", "").replace("misc.", "").replace("todo.", "").replace("music.", "") + ", ")
+            final += ("!" + command.replace("Cogs.", "").replace("utility.", "").replace("misc.", "").replace("todo.", "").replace("music.", "").replace("reminders.", "") + ", ")
         await ctx.send(final)
         channel =  ctx.channel
         async for message in channel.history(limit=200):

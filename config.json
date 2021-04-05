@@ -1,6 +1,6 @@
 {
 	"prefix": "!",
-	"version": "1.0", 
+	"version": "1.1", 
 	"commands": [
 		"Cogs.utility.help",
 		"Cogs.utility.ping",
