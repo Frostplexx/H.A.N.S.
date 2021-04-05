@@ -24,7 +24,9 @@ class ReminderCog(commands.Cog, name="reminder command"):
                 reminder = msg.split(" ")
                 del reminder[0]
                 #print(reminder)
-
+            #this block of code formats the command, which is written in "natural" language (e.g. !remindme in 3 hours and 5 minutes Buy cheese)
+            #to a datetime format e.g. 2021-04-05 14:37:22 and also extracts the message e.g. Buy cheese
+            #this can probably be done way better but if it works why change it (also i dont know how)
             if reminder[0] == "in" and reminder[3] != "and":
                 if reminder [2] == "hour" or reminder[2] == "hours": 
                     time_change = datetime.timedelta(hours=int(reminder[1]))
@@ -38,11 +40,10 @@ class ReminderCog(commands.Cog, name="reminder command"):
                 rmdatetime = today + time_change
                 
             elif reminder[0] == "in" and reminder[3] == "and":
-                del reminder[0:6]
-                rmtext = " ".join(reminder)
                 time_change = datetime.timedelta(hours=int(reminder[1])) + datetime.timedelta(minutes=int(reminder[4]))
                 rmdatetime = today + time_change
-
+                del reminder[0:6]
+                rmtext = " ".join(reminder)
             elif reminder[0] == "on":
                 day = str(reminder[1]).split(".")[0]
                 month = str(reminder[1]).split(".")[1]
@@ -60,7 +61,7 @@ class ReminderCog(commands.Cog, name="reminder command"):
 
                 rmdatetime = datetime.datetime(2021,int(month), int(day),int(hour), int(minute))
 
-
+            #write the datetime, the channel id and the text into a json file and send a successfull message
             final = {str(rmdatetime).split(".")[0] + " " +  str(chid): str(rmtext)}
             with open("Cogs/reminders/reminders.json", "r+") as file: 
                 data = json.load(file)

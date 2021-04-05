@@ -12,7 +12,7 @@ class PrevCog(commands.Cog, name="prev command"):
                     description = " prevous track")
     @commands.cooldown(1, 2, commands.BucketType.member)
     async def prev(self, ctx):
-
+        #goes back in the queue list
         if MHandler.index <= len(MHandler.queue) - 1:
             if ctx.voice_client.is_playing(): 
                 ctx.voice_client.stop()

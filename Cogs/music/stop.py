@@ -15,6 +15,7 @@ class StopCog(commands.Cog, name="stop command"):
         #stop the voice client,  when he is playing
         if ctx.voice_client.is_playing(): 
             ctx.voice_client.stop()
+            await ctx.send("Music stopped!")
 
 
 def setup(bot:commands.Bot):

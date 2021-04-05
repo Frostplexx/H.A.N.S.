@@ -12,9 +12,10 @@ class StaddCog(commands.Cog, name="stadd command"):
                     description = "Add sticker")
     @commands.cooldown(1, 2, commands.BucketType.member)
     async def stadd(self, ctx, name:str=None):
-
+        #get the url from the attachemnt
         url = ctx.message.attachments[0].url
         final = {name : url}
+        #add url and sticker name to json
         with open("Cogs/sticker/stickers.json", "r+") as file: 
             data = json.load(file)
             data.update(final)
