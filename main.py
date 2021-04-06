@@ -6,7 +6,7 @@ import threading
 import time
 import datetime
 
-
+started = True
 # Load config json and extract information
 with open("config.json", "r") as config: 
 	data = json.load(config)
@@ -28,13 +28,13 @@ bot = commands.Bot(prefix, intents = intents)
 
 # Load cogs
 loop = asyncio.get_event_loop()
-print(initial_extensions)
 
 if __name__ == '__main__':
 	for extension in initial_extensions:
 		try:
 			bot.load_extension(extension)
 		except Exception as e:
+			started = False
 			print(f"Failed to load extension {extension}")
 
 #load reminders file
@@ -51,14 +51,13 @@ async def signal(msg, channel_id):
 
 #timer method that runn a loop in background every 0.6 seconds
 def timer():
-	print("ready!")
 	while True:
 		#tries to load json file and if it fails it passes on
 		#otherwise it gives problems if you change something int the file
 		try: 
 			data = load()
 		except: 
-				pass
+			pass
 		#looks through all the variables/entries/reminders
 		for item in data:
 			today = str(datetime.datetime.today()).split(".")[0]
@@ -80,14 +79,15 @@ def timer():
 
 @bot.event
 async def on_ready():
-	print(f"We have logged in as {bot.user}")
-	await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name =f"{bot.command_prefix}help"))
-	print(discord.__version__)
-	#start the timer method as a backround task
-	b = threading.Thread(name='background', target=timer)
-	b.start()
-
-
+	if started:
+		await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name =f"{bot.command_prefix}help"))
+		#start the timer method as a backround task
+		b = threading.Thread(name='background', target=timer)
+		b.start()
+		print(f"Started Successfully! " + "Discord Version: " + discord.__version__)
+	else:
+		print("Error while starting! Pausing Bot") 
+		time.sleep(4294967)
 bot.run(token)
 
 

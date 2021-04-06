@@ -1,0 +1,37 @@
+
+----------------------------------------------
+
+                    Command
+
+import discord
+from discord.ext import commands
+
+
+class templateCog(commands.Cog, name="template command"): 
+    def __init__(self, bot:commands.bot):
+        self.bot = bot
+
+    @commands.command(name = "template",
+                    usage="",
+                    description = "Say template to the bot")
+    @commands.cooldown(1, 2, commands.BucketType.member)
+    async def template(self, ctx):
+        <Code>
+
+
+def setup(bot:commands.Bot):
+	bot.add_cog(templateCog(bot))
+
+---------------------------------------------------
+
+----------------------------------------------------
+                    Embed
+
+from random import randint
+
+embed = discord.Embed(title=f"<Embed Title>", color=randint(0, 0xffffff))
+embed.add_field(name=f"<String>", value=f"{(song)}", inline=False)
+embed.set_thumbnail(url=f'<URL>')
+await ctx.channel.send(embed=embed)
+
+-----------------------------------------------------

@@ -3,7 +3,7 @@
 A bot that does... stuff, written in python because fuck everything else.
 Not yet finished. 
 
-##TODO: 
+## TODO: 
 
 - [x] make a queue viewable
 - [ ] fix prev command
@@ -15,15 +15,17 @@ Not yet finished.
 - [ ] reminders
 - [x] version command
 - [x] comment my code lol
-- [ ] fix delte command
+- [ ] fix delete command
 - [ ] migrate to new slash commands
-
-
-##Features: 
+- [ ] music feature ist still buggy
+- [ ] add low level commands like bot restart and dumping files
+- [ ] fix command descriptions
+ 
+## Features: 
 - Todolist
 - Play music and very simple queue
 
-##Use: 
+## Use: 
 
 Make a token.json in the root directory containing this:
 
@@ -33,7 +35,7 @@ Make a token.json in the root directory containing this:
 
 pls provide your own token
 
-##Libraries: 
+## Libraries: 
     discord.py 
     discord.py[voice]
     youtube_dl
