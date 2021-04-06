@@ -75,7 +75,7 @@ def timer():
 				with open("Cogs/reminders/reminders.json", 'w') as data_file:
 					data = json.dump(data, data_file, sort_keys=True, indent=4)
 				break
-	time.sleep(0.6)
+		time.sleep(0.6)
 
 
 @bot.event
