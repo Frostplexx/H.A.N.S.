@@ -12,6 +12,7 @@ with open("config.json", "r") as config:
 	data = json.load(config)
 	prefix = data["prefix"]
 	initial_extensions = data["commands"]
+	botver = data["version"]
 with open("token.json", "r") as config:
 		data = json.load(config)
 		token = data["token"]
@@ -84,7 +85,7 @@ async def on_ready():
 		#start the timer method as a backround task
 		b = threading.Thread(name='background', target=timer)
 		b.start()
-		print(f"Started Successfully! " + "Discord Version: " + discord.__version__)
+		print(f"Started Successfully! " + "Discord Version: " + discord.__version__ + " | Bot Version: " + botver)
 	else:
 		print("Error while starting! Pausing Bot") 
 		time.sleep(4294967)

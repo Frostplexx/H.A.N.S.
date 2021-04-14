@@ -14,6 +14,8 @@
 		"Cogs.todo.tick",
 		"Cogs.todo.delete",
 		"Cogs.todo.untick",
+		"Cogs.todo.tickall",
+		"Cogs.todo.untickall",
 		"Cogs.music.play",
 		"Cogs.music.skip",
 		"Cogs.music.stop",
@@ -21,6 +23,8 @@
 		"Cogs.music.queue",
 		"Cogs.music.clear",
 		"Cogs.reminders.remindme",
-		"Cogs.reminders.reminders"
+		"Cogs.reminders.reminders",
+		"Cogs.admin.dumpjson"
+
 	]
 }

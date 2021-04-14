@@ -10,7 +10,7 @@ Not yet finished.
 - [x] really clean up the cogs folder
 - [ ] server stats would be cool
 - [ ] make options like prefix
-- [ ] tickall command
+- [x] tickall command
 - [x] todoedit without ""
 - [ ] reminders
 - [x] version command

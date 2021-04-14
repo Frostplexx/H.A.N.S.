@@ -13,16 +13,6 @@ class Dumpjson(commands.Cog, name="dumpjson command"):
     @commands.cooldown(1, 2, commands.BucketType.member)
         #send content of all json files
         async def dumpjson(self, ctx):
-            with open("Cogs/reminders/reminders.json", "r") as data_file:
-                await ctx.send("reminders.json:")
-                await ctx.send(json.load(data_file))
-            with open("config.json", "r") as data_file:
-                await ctx.send("config.json:")
-                await ctx.send(json.load(data_file))
-            with open("Cogs/sticker/stickers.json", "r") as data_file:
-                await ctx.send("stickers.json:")
-                await ctx.send(json.load(data_file))
-            await ctx.send("Done!")
-
+            pass
 def setup(bot:commands.Bot):
 	bot.add_cog(Dumpjson(bot))

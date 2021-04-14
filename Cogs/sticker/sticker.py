@@ -14,24 +14,26 @@ class StickerCog(commands.Cog, name="sticker command"):
                     description = "Send a sticker")
     @commands.cooldown(1, 2, commands.BucketType.member)
     async def sticker(self, ctx,sticker:str=None):
+        #load and send the image  
         channel =  ctx.channel
-        guild = ctx.guild
-        #searches last 200 messages
-        async for message in channel.history(limit=200):
-            #delete the original command
-            if ("!sticker " + sticker) in message.content:
-                await message.delete()
-                member = await guild.fetch_member(message.author.id)
-                nick = member.display_name
-                break
-        #load and send the image 
+        guild = ctx.guild       
         if sticker is not None:
+            async for message in channel.history(limit=200):
+                #searches last 200 messages
+                #delete the original command
+                if ("!sticker " + sticker) in message.content:
+                    await message.delete()
+                    member = await guild.fetch_member(message.author.id)
+                    nick = member.display_name
+                    break
+
             with open("Cogs/sticker/stickers.json", "r") as config: 
                 data = json.load(config)
                 for item in data:
                     if sticker in item: 
                         await ctx.send(nick + ":")
                         await ctx.send(data[item])
+
 
         #if no sticker name is given send a list of aviable stickers
         else:
